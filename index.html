@@ -137,6 +137,9 @@ function calculateHeatIndex(){
     let levelText = "";
 
     if(HI < 31){
+        levelText = "없음";
+    }
+    else if(HI < 33){
         levelText = "관심";
     }
     else if(HI < 35){

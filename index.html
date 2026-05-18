@@ -124,6 +124,80 @@
 
 </div>
 
+<!-- 접었다 펼치는 체감온도 산출식 -->
+<details style="
+    margin-top:20px;
+    background:white;
+    border-radius:15px;
+    border:1px solid #dbe6ff;
+    padding:15px;
+">
+
+    <summary style="
+        cursor:pointer;
+        font-size:20px;
+        font-weight:bold;
+        color:#0078ff;
+        outline:none;
+    ">
+        체감온도 산출식 보기
+    </summary>
+
+    <div style="
+        margin-top:20px;
+        line-height:1.8;
+        color:#333;
+        font-size:15px;
+    ">
+
+        <p>
+            기상청 여름철 체감온도는 기온과 상대습도를 이용하여 계산합니다.
+        </p>
+
+        <div style="
+            overflow-x:auto;
+            background:#f4f7fb;
+            padding:15px;
+            border-radius:10px;
+            font-family:monospace;
+            font-size:15px;
+        ">
+            체감온도 = -0.2442 + 0.55399×Tw + 0.45535×Ta
+            - 0.0022×Tw² + 0.00278×Tw×Ta + 3.0
+        </div>
+
+        <p style="margin-top:15px;">
+            • Ta : 기온(℃)<br>
+            • Tw : 습구온도(℃)
+        </p>
+
+        <p>
+            습구온도는 기온과 상대습도를 이용하여 계산됩니다.
+        </p>
+
+        <div style="
+            overflow-x:auto;
+            background:#f4f7fb;
+            padding:15px;
+            border-radius:10px;
+            font-family:monospace;
+            font-size:14px;
+        ">
+            Tw = Ta × atan(0.151977 × √(RH + 8.313659))
+            + atan(Ta + RH)
+            - atan(RH - 1.67633)
+            + 0.00391838 × RH^(3/2) × atan(0.023101 × RH)
+            - 4.686035
+        </div>
+
+        <p style="margin-top:15px;">
+            • RH : 상대습도(%)
+        </p>
+
+    </div>
+
+</details>
+    
 </div>
 
 <script>

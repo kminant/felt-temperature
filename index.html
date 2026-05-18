@@ -117,8 +117,8 @@
         </h3>
 
         <p>
-            기온에 상대습도의 영향이 더해져 사람이 느끼는 더위를 정량적으로 나타낸 온도로,
-            습도 약 55%를 기준으로 습도가 10% 증가 혹은 감소함에 따라
+            기온에 상대습도의 영향이 더해져 사람이 느끼는 더위를 추정하여 산출한 온도로,
+            습도 약 55%를 기준으로 습도가 10%p 증가 혹은 감소함에 따라
             체감하는 온도가 약 1℃ 증가 혹은 감소하는 특징이 있다.
         </p>
 
@@ -160,27 +160,6 @@ function calculateHeatIndex(){
     document.getElementById("result").innerHTML =
         result + " ℃";
 
-    // 위험 단계 표시
-    let levelText = "";
-
-    if(HI < 31){
-        levelText = "없음";
-    }
-    else if(HI < 33){
-        levelText = "관심";
-    }
-    else if(HI < 35){
-        levelText = "주의";
-    }
-    else if(HI < 38){
-        levelText = "경고";
-    }
-    else{
-        levelText = "위험";
-    }
-
-    document.getElementById("level").innerHTML =
-        "폭염 단계 : " + levelText;
 }
 
 </script>
